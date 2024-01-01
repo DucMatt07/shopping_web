@@ -1,0 +1,107 @@
+.header {
+  height: 120px;
+  background-image: linear-gradient(0, #f83d28, #fd502e);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.header__navbar-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 4px;
+}
+.header__navbar-items {
+  position: relative;
+  margin: 0 8px;
+  min-height: 26px;
+}
+.header__navbar-items,
+.header__navbar-items-link {
+  color: var(--white-color);
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-decoration: none;
+  display: inline-block;
+}
+.header__navbar-items--bold {
+  font-weight: 400;
+}
+.header__navbar-items--separate::after {
+  content: "";
+  display: block;
+  border-left: 1px solid var(--white-color);
+  height: 12px;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.header__navbar-items:hover,
+.header__navbar-items-link:hover,
+.header__navbar-icon:hover {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.header__navbar-items,
+.header__navbar-icon-link,
+.header__navbar-items-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.header__navbar-icon-link {
+  color: var(--white-color);
+}
+.header__navbar-icon {
+  font-size: 1.8rem;
+  margin: 0 4px;
+}
+.header__navbar-items-title {
+  color: var(--white-color);
+  cursor: text;
+}
+.header__navbar--see-qr:hover .header__qr {
+  display: block;
+}
+.header__qr {
+  width: 186px;
+  background-color: var(--white-color);
+  position: absolute;
+  padding: 8px;
+  top: 118%;
+  left: 0;
+  border-radius: 2px;
+  display: none;
+  animation: fadeIn ease-in 0.3s;
+}
+.header__qr::before {
+  content: "";
+  display: block;
+  top: -15px;
+  left: 0;
+  height: 20px;
+  width: 100%;
+  position: absolute;
+}
+.header__qr-img {
+  width: 100%;
+}
+/* Download store header */
+.header__download-store {
+  display: flex;
+  justify-content: space-between;
+}
+.header__download-store-img:nth-child(1) {
+  margin-left: 11px;
+}
+.header__download-store-img:nth-child(2) {
+  margin-right: 11px;
+}
+.header__download-store-img {
+  height: 16px;
+}
